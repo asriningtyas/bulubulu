@@ -2,6 +2,7 @@ import landingPage1 from "../../Assets/Image/LandingPage.png";
 import logo from "../../Assets/Image/LOGO_BULUBULU.png";
 import { BsWhatsapp, BsTiktok, BsFacebook } from "react-icons/bs";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 export default function Index() {
@@ -40,10 +41,10 @@ export default function Index() {
           </div>
           <div className="pl-2">
             <div
-              className="border border-[#598665] p-3 rounded-full cursor-pointer text-[#598665] hover:bg-[#598665] hover:text-white"
+              className="border border-[#598665] p-3 rounded-full cursor-pointer text-[#598665] hover:bg-[#598665] hover:text-white flex items-center gap-2"
               onClick={() => navigate("/login")}
             >
-              Daftar Sekarang &gt;&gt;
+              Daftar Sekarang <MdKeyboardDoubleArrowRight size="25px"/>
             </div>
           </div>
         </div>

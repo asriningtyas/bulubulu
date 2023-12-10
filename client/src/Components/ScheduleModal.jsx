@@ -74,12 +74,12 @@ export default function ScheduleModal({
   }, [isSuccess]);
 
   const isDateSelectable = (date) => {
-    const dayOperationIndex = operationDays.map(
-      (dayOperation) => listDays.findIndex((day) => day === dayOperation)
+    const dayOperationIndex = operationDays.map((dayOperation) =>
+      listDays.findIndex((day) => day === dayOperation)
     );
-    console.log(operationDays)
-    console.log(dayOperationIndex)
-    console.log(date.getDay())
+    console.log(operationDays);
+    console.log(dayOperationIndex);
+    console.log(date.getDay());
     return !dayOperationIndex?.includes(date.getDay());
   };
 
@@ -117,7 +117,7 @@ export default function ScheduleModal({
     <>
       <div>
         <div className="justify-center items-center flex fixed inset-0 z-50">
-          <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-[90%] lg:w-[50%] h-[85%] overflow-x-hidden overflow-y-auto bg-white outline-none focus:outline-none">
+          <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-[90%] lg:w-[50%] h-[585px] overflow-x-hidden overflow-y-auto bg-white outline-none focus:outline-none">
             <div className="flex items-center justify-between pl-5 p-3 border-b border-solid bg-[#FF834F] border-slate-200 rounded-t-lg  text-white">
               <div className="capitalize font-semibold">
                 Jadwalkan Kunjungan Langsung
@@ -146,10 +146,10 @@ export default function ScheduleModal({
                 </div>
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row items-start justify-center">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-center">
               <style>{css}</style>
               <DayPicker
-                className="flex justify-center w-full"
+                className="flex justify-center items-center w-full m-0"
                 mode="single"
                 selected={selectedDate}
                 onSelect={setSelectedDate}
@@ -182,12 +182,17 @@ export default function ScheduleModal({
               </div>
             </div>
             <div className="px-3 py-3 lg:-mt-8 flex justify-end">
-              <div
-                className={`p-2 px-5 rounded-lg border ${!petMessage || !selectedDate || !selectedTime ? 'bg-slate-400' :  'bg-[#FF834F] text-white cursor-pointer'}`}
+              <button
+                disabled={!petMessage || !selectedDate || !selectedTime}
+                className={`p-2 px-5 rounded-lg border btn ${
+                  !petMessage || !selectedDate || !selectedTime
+                    ? ""
+                    : "bg-[#FF834F] text-white cursor-pointer"
+                }`}
                 onClick={handleSchedule}
               >
                 Jadwalkan
-              </div>
+              </button>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function Main() {
   return auth?.role === "vet" ? (
     <Navigate to="/vet" replace />
   ) : (
-    <div className="scroll-smooth overflow-y-auto flex-1 bg-[#fdc074] pt-24 flex flex-col gap-4">
+    <div className="scroll-smooth overflow-y-auto h-full bg-[#fdc074] pt-24 flex flex-col gap-4">
       {/* Main Services */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 px-4 lg:px-24 w-full">
         <div className="card max-sm:card-compact card-side bg-[#edf3ee] border-2 border-[#c8e1ce] shadow-xl">
