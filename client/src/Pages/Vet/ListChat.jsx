@@ -11,7 +11,7 @@ export default function ListChat({ search = "" }) {
   // const socket = io("http://localhost:8000", {
   //   transports: ["websocket", "polling"],
   // });
-  const socket = io("https://api-bulubulu.onrender.com", {
+  const socket = io("https://api-bulubulu-rsaa.onrender.com", {
     transports: ["websocket", "polling"],
   });
   const queryClient = useQueryClient();

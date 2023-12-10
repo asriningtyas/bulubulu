@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
 // axios.defaults.baseURL = "http://localhost:8000/";
-axios.defaults.baseURL = "https://api-bulubulu.onrender.com/";
+axios.defaults.baseURL = "https://api-bulubulu-rsaa.onrender.com/";
 
 export function Login() {
   const { isLoading, isError, isSuccess, error, data, mutate } = useMutation({
